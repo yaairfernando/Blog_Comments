@@ -1,0 +1,17 @@
+<div class="container">
+  <% if obj.errors.any? %>
+    <p>
+    </p>
+    <div class="notification is-danger">
+      <strong>
+        <%= pluralize(obj.errors.count, "error") %> prevented this post of being created
+      </strong>
+      <button class="delete"></button>
+      <ul>
+          <% obj.errors.full_messages.each do |error| %>
+            <li><%= error %></li>
+            <% end %>
+          </ul>
+      </div>
+  <% end %>
+</div>
