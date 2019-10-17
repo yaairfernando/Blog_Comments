@@ -36,6 +36,18 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+##ADDING THE NEW GEMS
+#Make errors better looking
+gem 'better_errors', '~> 2.5', '>= 2.5.1'
+
+#Bulma CSS
+gem 'bulma-rails', '~> 0.7.5'
+
+#Simple Form
+gem 'simple_form', '~> 5.0', '>= 5.0.1'
+
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -48,6 +60,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  
+  #Guard is a command line tool to easily handle events on file system modifications.
+  gem 'guard', '~> 2.15', '>= 2.15.1'
+  #Guard::LiveReload automatically reloads your browser when 'view' files are modified.
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 end
 
 group :test do
