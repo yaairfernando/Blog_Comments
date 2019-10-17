@@ -1,0 +1,10 @@
+<div class="container">
+  <% if flash.any? %>
+    <% flash.each do |name, msg| %>
+    <div class='notification is-<%="#{name}"%>'>
+        <button class="delete"></button>
+    <%= content_tag :div, msg, :id=> "flash_#{name}" if msg.is_a?(String) %>
+    </div>
+    <% end %>
+  <% end %>
+</div>
